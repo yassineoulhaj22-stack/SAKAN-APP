@@ -1,19 +1,15 @@
-# Sakan – App Android (Flutter)
+# Sakan – APK Android (www/index.html + Capacitor)
 
-Application de location de logements (Maroc) : onboarding, accueil, recherche + filtres + carte,
-détails, prise de visite, confirmation, messagerie, favoris/comparateur, dossier locatif, profil.
+L'application est dans `www/index.html` (HTML/CSS/JS, fonctionne hors-ligne).
+Capacitor l'emballe dans une vraie APK Android.
 
-## Générer l'APK avec GitHub
-1. Crée un dépôt GitHub et envoie-y **tout le contenu** de ce ZIP (le dossier `.github` inclus).
-2. Va dans l'onglet **Actions** → workflow **Build Sakan APK** → *Run workflow* (ou fais simplement un push).
-3. Quand le build est vert, l'APK est publié automatiquement dans **Releases** (colonne de droite de la page du dépôt) sous le nom `Sakan.apk`. Il est aussi dans l'exécution → **Artifacts** → `sakan-apk`.
+## Obtenir l'APK
+1. Crée un dépôt GitHub et envoies-y **tout le contenu** de ce ZIP (dossier `.github` inclus).
+2. Onglet **Actions** → **Build and Deploy Sakan APK** → *Run workflow* (ou un simple push).
+3. Quand c'est vert : page du dépôt → **Releases** → télécharge `Sakan.apk`
+   (aussi dans l'exécution → Artifacts → `sakan-apk`).
 
-Si la publication échoue : *Settings → Actions → General → Workflow permissions → Read and write permissions*.
+Si la publication échoue : Settings → Actions → General → Workflow permissions → *Read and write*.
 
-Le workflow génère automatiquement les fichiers Android (`flutter create`) puis compile l'APK.
-
-## En local
-```
-flutter create --platforms=android --org ma.sakan --project-name sakan .
-flutter run
-```
+L'APK est en mode debug : elle s'installe directement sur le téléphone
+(autoriser « sources inconnues »).
